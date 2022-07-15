@@ -64,3 +64,4 @@ def func_7(list_num_arg, num_arg = 3):
     avg_new_res = sum(new_res) / len(new_res)
     print('average of new list =', avg_new_res)
 
+

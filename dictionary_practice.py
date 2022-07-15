@@ -1,3 +1,4 @@
+
 ''' 1. From two lists, create a dictionary
 keys = ['Ten', 'Twenty', 'Thirty']
 values = [10, 20, 30]
@@ -196,6 +197,7 @@ for k1,v1 in sample_dict.items() :
             sample_dict[k1]['salary'] = 8500 
 
 print('the dict after change is',sample_dict)
+
 
 
 
