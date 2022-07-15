@@ -76,9 +76,12 @@ print(min)
 
 
 #13 remove duplicate value from my_list_num, if have 
-for x in my_list_num :
-    if x - x == 0 :
-        my_list_num.remove(x)
+new_list = []
+for x in my_list_num:
+    if x not in new_list:
+        new_list.append(x) 
+        my_list_num = new_list.copy()
+        print(my_list_num)
 
 #14 display odd and even number of my_list_num 
 for odd in my_list_num:
