@@ -17,12 +17,8 @@ def cal_input(a, b):
         print(a/b)
 #2: define a function to check whether a number from keyboards is a square number
 def square_num_check(a):
-
-    if type(sqrt(a)) is int:
-        print(a,'is a square number')
-    else :
-        print(a,'is not a square number')
-
+    if type(sqrt(a)) is int : 
+        print(a, 'is square number')
 #3: define a function that accepts 3 arguments then check whether exist a triangle which is crearted by them. Return the result
 def func_3(a, b, c):
     if (a > b + c) or (b > a + c) or (c > b + a) :
@@ -32,21 +28,37 @@ def func_3(a, b, c):
 
 
 #4 defind a function that accepts one string argument and return number of  vowels and consonants. 
-count_1 = 0
-count_2 = 0
+vowel = 0
+consonants = 0 
 def func_4(message):
-    for x in message:
-        if x == 'a'or x == 'e' or x == 'i' or x == 'o' or x == 'u':
-            count_1 = count_1 +1
+    for x in message :
+        vowels_List = ('a','e','i','o','u','A','E','I','O','U')
+        if x in vowels_List:
+            vowel = vowel + 1
         else :
-            count_2 = count_2 +1
-
-    print('so nguyen am la', count_1)
-    print('so phu am la', count_2)
+            consonants +=1
+print('So luong nguyen am la', vowel)
+print('So luong phu am la', consonants)
 
 
 #5 defind a function that accepts a number (n) and return n first number of Fibonacci sequences
 
+
+def func_5(n):
+    count = 0
+    n1, n2 = 0, 1
+    if n < 0:
+        print('please enter a positive number')
+    elif n == 1: 
+        print(n1)
+    else: 
+        print('Fibonacci sequence:')
+        while count < n : 
+            print(n1)
+            nth = n1 + n2 
+            n1 = n2 
+            n2 = nth 
+            count += 1
 
 
 #6 defind a function that accepts a radius argument and return area and perimeter
