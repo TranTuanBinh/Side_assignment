@@ -1,24 +1,26 @@
-#1: define a functiobn that accept 2 values and return its sum, subtraction and multiplication (use exeption for division)
+#1: define a functiobn that accept 2 values and return its sum, subtraction and multiplication (use exception for division)
 from audioop import avg
 from cmath import sqrt
 from itertools import count
+from logging import exception
 
 
 def cal_input(a, b):
     print(a+b)
     print(a-b)
     print(a*b)
-    try: 
+    try:
         print(a/b)
-    except:
-        print('lỗi')
-        raise
-    finally :
-        print(a/b)
+    except: 
+        print('lỗi không thực hiện được')
+    
 #2: define a function to check whether a number from keyboards is a square number
 def square_num_check(a):
-    if type(sqrt(a)) is int : 
-        print(a, 'is square number')
+    for i in range(a):
+        if i * i == a: 
+            print('at',i,a,'is a square number')
+        else:
+            print('at',i,a,'is not a square number')
 #3: define a function that accepts 3 arguments then check whether exist a triangle which is crearted by them. Return the result
 def func_3(a, b, c):
     if (a > b + c) or (b > a + c) or (c > b + a) :
