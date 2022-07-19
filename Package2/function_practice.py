@@ -79,3 +79,9 @@ def func_7(list_num_arg, num_arg = 3):
     print('average of new list =', avg_new_res)
 
 
+
+
+
+
+
+
