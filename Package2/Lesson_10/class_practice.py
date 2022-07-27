@@ -44,6 +44,7 @@ class student:
         self.age = age
         self.email = email
         self.sex = sex
+        
     def get_name(self):
         return self.name
     
@@ -72,8 +73,10 @@ class staff:
         self.role = role
         self._department = department
         self.__salary = salary
+
     def show_salary(self):
         return self.__salary
+
     def show_detail(self):
         print(self.role, self._department, self.show_salary())
 
@@ -83,7 +86,9 @@ class studentt(staff):
     def __init__(self,name, age, role, department, salary):
         self.name =  name
         self.age = age
+
         super().__init__(role, department, salary)
+
 #create new object of student  then show all attributes of that object
 std = studentt('binh', 21, 'newbie', 'fresher', '500')
 print(std.name, std.age, std.role, std._department, std.show_salary(),)
@@ -94,6 +99,7 @@ print(std.name, std.age, std.role, std._department, std.show_salary(),)
 class geometry:
     def get_area(): 
         pass
+
     def get_perimeter():
         pass
 #4.2 define a class named square which inheritated from geometry class. this  class has 2 attributes are length and width, Override two methods from its parrent
@@ -101,8 +107,10 @@ class square(geometry):
     def __init__(self,length,width) :
         self.length = length
         self.width = width
+
     def get_area(self):
         return self.length * self.width
+
     def get_perimeter(self):
         return self.length * 4
         
@@ -112,22 +120,29 @@ class circle(geometry):
     def __init__(self, radius):
         self.radius = radius
 
-    def get_area_circle(self):
+    def get_area(self):
         return self.radius * 3.14
-    def get_perimeter_circle(self):
+
+    def get_perimeter(self):
         return self.radius * 2 * 3.14
         
 #4.4 create a new object of class square and circle, print area and perimeter of those
 obj_square = square(1,2) #object for square class
+
 # square perimeter 
 print('perimeter of the square are', square.get_perimeter())
+
 # square area 
 print('area of the square are',square.get_perimeter() )
 
+
+
 obj_circle = circle(3) #object for circle class
+
 # area of circle
-print('area of the circle are', circle.get_area_circle())
+print('area of the circle are', circle.get_area())
+
 # perimeter of circle
-print('perimeter of the circle are', circle.get_perimeter_circle())
+print('perimeter of the circle are', circle.get_perimeter())
 
 
