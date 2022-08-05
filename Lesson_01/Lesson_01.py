@@ -1,7 +1,3 @@
-from tkinter import Y
-from unicodedata import name
-
-
 print('hello world')
 
 
