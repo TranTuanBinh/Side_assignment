@@ -14,6 +14,8 @@ for x in str_txt:
     if x == 't' or x == 'T': 
         count +=1
 
+print(count)
+
 
 #2 
 password = input('insert your password: ')
@@ -22,8 +24,9 @@ correct_length = False
 has_uppercase = False 
 has_lowercase = False
 has_digit = False
+length = 7
 
-if len(password) >= 7:
+if len(password) >= length:
     correct_length = True
 
 for x in password: 
@@ -40,3 +43,7 @@ else:
     is_valid = False 
 
 print(is_valid)
+
+
+
+
